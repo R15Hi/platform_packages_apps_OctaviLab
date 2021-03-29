@@ -64,6 +64,12 @@
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_tile_title_visibility_title"
         android:defaultValue="true" />
+     
+    <com.octavi.lab.preferences.SystemSettingSwitchPreference   
+        android:key="oos_dismiss_all_button"
+        android:title="@string/enable_clear_all_button"
+        android:summary="@string/enable_clear_all_button_summary"
+        android:defaultValue="false" />
 
     <com.octavi.lab.preferences.SecureSettingSwitchPreference
         settings:iconSpaceReserved="false"

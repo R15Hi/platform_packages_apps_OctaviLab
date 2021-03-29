@@ -1073,5 +1073,9 @@
 
     <!-- Custom Wi-Fi bar icons -->
     <string name="custom_wifi_bar_title">Wi-Fi</string>
+    
+    <!-- OOS Clear All button -->
+    <string name="enable_clear_all_button">OOS Clear-all button</string>
+    <string name="enable_clear_all_button_summary">Use icon button instead of text</string>
 
 </resources>
