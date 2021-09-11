@@ -89,6 +89,15 @@
         settings:iconSpaceReserved="false"
         android:entries="@array/s_settings_style_entries"
         android:entryValues="@array/s_settings_style_values" />
+        
+    <com.octavi.lab.preferences.SystemSettingListPreference    
+        android:key="charging_animation_style"
+           android:title="@string/charging_animation_style_title"
+           android:entries="@array/charging_animation_style_entries"
+           android:entryValues="@array/charging_animation_style_values"
+           android:summary="%s"
+	       android:dependency="charging_animation"
+           android:defaultValue="1" />
 
     <!-- Gvisual mod -->
     <PreferenceCategory 
