@@ -23,6 +23,13 @@ import androidx.fragment.app.Fragment;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
+import android.content.om.IOverlayManager;
+import android.os.Bundle;
+import android.os.RemoteException;
+import android.os.ServiceManager;
+import android.provider.Settings;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 import android.provider.Settings;
@@ -62,6 +69,7 @@ public class OctaviThemes extends DashboardFragment implements
 
     private ColorPickerPreference rgbAccentPicker;
     private ListPreference mSwitchStyle;
+    private IOverlayManager mOverlayService;
 
     @Override
     protected String getLogTag() {
@@ -184,6 +192,10 @@ public class OctaviThemes extends DashboardFragment implements
                 "android.theme.customization.adaptive_icon_shape"));
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.icon_pack.android"));
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.signal_icon"));
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.wifi_icon"));        
         controllers.add(new CustomOverlayPreferenceController(context,
 		"android.theme.customization.custom_overlays"));
         return controllers;
