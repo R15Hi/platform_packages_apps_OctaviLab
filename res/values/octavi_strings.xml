@@ -578,6 +578,7 @@
     <string name="switch_md2">MD2</string>
     <string name="switch_retro">Retro</string>
     <string name="switch_telegram">Telegram</string>
+    <string name="switch_a12">Android12</string>
 
     <!-- Octavi Themeing Stuffs -->
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize headline and body fonts. -->
