@@ -579,6 +579,12 @@
     <string name="switch_retro">Retro</string>
     <string name="switch_telegram">Telegram</string>
     <string name="switch_a12">Android12</string>
+    <string name="switch_emotic">Emotic</string>
+    <string name="switch_gassist">Gassist</string>
+    <string name="switch_small">Small</string>
+    <string name="switch_weird">Weird</string>
+    <string name="switch_moon">Moon</string>
+    <string name="switch_colors">Colors</string>
 
     <!-- Octavi Themeing Stuffs -->
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize headline and body fonts. -->

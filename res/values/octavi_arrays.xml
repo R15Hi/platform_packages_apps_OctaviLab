@@ -579,6 +579,12 @@
         <item>@string/switch_retro</item>
         <item>@string/switch_telegram</item>
         <item>@string/switch_a12</item>
+         <item>@string/switch_colors</item>
+        <item>@string/switch_emotic</item>
+        <item>@string/switch_small</item>
+        <item>@string/switch_moon</item>
+        <item>@string/switch_weird</item>
+        <item>@string/switch_gassist</item>
     </string-array>
     <string-array name="switch_style_values" translatable="false">
         <item>0</item>
@@ -589,6 +595,12 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
+         <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
     </string-array>
 
     <!-- Ambient music ticker location -->
