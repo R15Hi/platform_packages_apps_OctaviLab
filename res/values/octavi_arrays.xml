@@ -190,6 +190,15 @@
         <item>@string/status_bar_battery_style_filled_circle</item>
         <item>@string/status_bar_battery_style_text</item>
         <item>@string/status_bar_battery_style_hidden</item>
+        <item>@string/status_bar_battery_style_icon_landscape_buddy</item>
+        <item>@string/status_bar_battery_style_icon_landscape_line</item>
+        <item>@string/status_bar_battery_style_icon_landscape_musku</item>
+        <item>@string/status_bar_battery_style_icon_landscape_pill</item>
+        <item>@string/status_bar_battery_style_icon_landscape_signal</item>
+        <item>@string/status_bar_battery_style_icon_rlandscape_style_a</item>
+        <item>@string/status_bar_battery_style_icon_landscape_style_a</item>
+        <item>@string/status_bar_battery_style_icon_rlandscape_style_b</item>
+        <item>@string/status_bar_battery_style_icon_landscape_style_b</item>
     </string-array>
     <string-array name="status_bar_battery_style_values" translatable="false">
         <item>0</item>
@@ -200,46 +209,15 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
-    </string-array>
-
-    <!-- Battery mode -->
-    <string-array name="qs_battery_mode_entries">
-        <item>@string/battery_percentage_off</item> 
-        <item>@string/battery_percentage_next</item> 
-        <item>@string/battery_percentage_inside</item> 
-        <item>@string/battery_percentage_estimate</item>
-    </string-array>
-
-    <string-array name="qs_battery_mode_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item> 
-        <item>3</item>
-    </string-array>
-
-    <!-- Status bar - Battery custom charging symbol -->
-    <string-array name="text_charging_symbol_entries" translatable="false">
-        <item>@string/text_charging_symbol_default</item>
-        <item>@string/text_charging_symbol_flash</item>
-        <item>@string/text_charging_symbol_tilde</item>
-        <item>@string/text_charging_symbol_plus</item>
-        <item>@string/text_charging_symbol_star</item>
-        <item>@string/text_charging_symbol_rupee</item>
-        <item>@string/text_charging_symbol_dollar</item>
-        <item>@string/text_charging_symbol_euro</item>
-        <item>@string/text_charging_symbol_cent</item>
-    </string-array>
-
-    <string-array name="text_charging_symbol_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
         <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
     </string-array>
 
     <!-- Screenshot type  -->
