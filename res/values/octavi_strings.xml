@@ -1098,5 +1098,9 @@
     <!-- OOS Clear All button -->
     <string name="enable_clear_all_button">OOS Clear-all button</string>
     <string name="enable_clear_all_button_summary">Use icon button instead of text</string>
-
+    
+    <!-- Make circle battery drawable colored -->
+    <string name="battery_level_colors_title">Make colorful circle battery icon</string>
+    <string name="battery_level_colors_summary">Each battery level drop is color coded</string>
+    
 </resources>
