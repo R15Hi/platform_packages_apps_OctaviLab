@@ -50,9 +50,13 @@ public class AnimationSettings extends SettingsPreferenceFragment
 
     private static final String KEY_TOAST_ANIMATION = "toast_animation";
     private static final String KEY_SCREEN_OFF_ANIMATION = "screen_off_animation";
+    private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
+    private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
 
     private ListPreference mToastAnimation;
     private ListPreference mScreenOffAnimation;
+    private ListPreference mListViewAnimation;
+    private ListPreference mListViewInterpolator;
     private Context mContext;
 
     @Override
@@ -74,6 +78,21 @@ public class AnimationSettings extends SettingsPreferenceFragment
         mToastAnimation.setValueIndex(CurrentToastAnimation); //set to index of default value
         mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
         mToastAnimation.setOnPreferenceChangeListener(this);
+        
+        mListViewAnimation = (ListPreference) findPreference(KEY_LISTVIEW_ANIMATION);
+        int listviewanimation = Settings.Global.getInt(getContentResolver(),
+                Settings.Global.LISTVIEW_ANIMATION, 0);
+        mListViewAnimation.setValue(String.valueOf(listviewanimation));
+        mListViewAnimation.setSummary(mListViewAnimation.getEntry());
+        mListViewAnimation.setOnPreferenceChangeListener(this);
+
+        mListViewInterpolator = (ListPreference) findPreference(KEY_LISTVIEW_INTERPOLATOR);
+        int listviewinterpolator = Settings.Global.getInt(getContentResolver(),
+                Settings.Global.LISTVIEW_INTERPOLATOR, 0);
+        mListViewInterpolator.setValue(String.valueOf(listviewinterpolator));
+        mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
+        mListViewInterpolator.setOnPreferenceChangeListener(this);
+        mListViewInterpolator.setEnabled(listviewanimation > 0);
 
         mScreenOffAnimation = (ListPreference) findPreference(KEY_SCREEN_OFF_ANIMATION);
         int screenOffAnimation = Settings.System.getInt(getContentResolver(),
@@ -97,6 +116,21 @@ public class AnimationSettings extends SettingsPreferenceFragment
             Settings.Global.putString(getContentResolver(), Settings.Global.TOAST_ANIMATION, (String) newValue);
             mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
             Toast.makeText(mContext, "Toast Test", Toast.LENGTH_SHORT).show();
+            return true;
+         } else if (preference == mListViewAnimation) {
+            int value = Integer.parseInt((String) newValue);
+            int index = mListViewAnimation.findIndexOfValue((String) newValue);
+            Settings.Global.putInt(getContentResolver(),
+                    Settings.Global.LISTVIEW_ANIMATION, value);
+            mListViewAnimation.setSummary(mListViewAnimation.getEntries()[index]);
+            mListViewInterpolator.setEnabled(value > 0);
+            return true;
+        } else if (preference == mListViewInterpolator) {
+            int value = Integer.parseInt((String) newValue);
+            int index = mListViewInterpolator.findIndexOfValue((String) newValue);
+            Settings.Global.putInt(getContentResolver(),
+                    Settings.Global.LISTVIEW_INTERPOLATOR, value);
+            mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
             return true;
         } else if (preference == mScreenOffAnimation) {
             int value = Integer.valueOf((String) newValue);
