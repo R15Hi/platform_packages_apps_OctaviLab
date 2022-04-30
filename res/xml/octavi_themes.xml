@@ -90,6 +90,27 @@
         android:entries="@array/s_settings_style_entries"
         android:entryValues="@array/s_settings_style_values" />
         
+     <com.octavi.lab.preferences.GlobalSettingSwitchPreference
+            settings:iconSpaceReserved="false"
+            android:key="wake_when_plugged_or_unplugged"
+            android:title="@string/wakeup_when_plugged_unplugged_title"
+            android:summary="@string/wakeup_when_plugged_unplugged_summary"
+            android:defaultValue="true" />
+
+    <com.octavi.lab.preferences.SystemSettingSwitchPreference
+            settings:iconSpaceReserved="false"
+           android:key="charging_animation"
+           android:title="@string/charging_animation_title"
+           android:summary="@string/charging_animation_summary"
+           android:defaultValue="true" />   
+           
+   <com.octavi.lab.preferences.SystemSettingSwitchPreference        
+           android:key="charging_animation_bg"
+            android:title="@string/charging_animation_bg_title"
+            android:summary="@string/charging_animation_bg_summary"
+            android:dependency="charging_animation"
+            android:defaultValue="false" />
+        
     <com.octavi.lab.preferences.SystemSettingListPreference    
         android:key="charging_animation_style"
            android:title="@string/charging_animation_style_title"
