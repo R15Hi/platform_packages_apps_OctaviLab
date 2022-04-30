@@ -1127,4 +1127,6 @@
     <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
     <string name="listview_bounce_interpolator">Bounce</string>
     
+    <!-- QQS Count -->
+    <string name="qqs_count_title">Increase the number of icons in QQS</string>
 </resources>

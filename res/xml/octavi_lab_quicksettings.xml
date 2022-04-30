@@ -58,6 +58,14 @@
             android:min="1"
             android:defaultValue="4"
             settings:units="" />
+            
+        <com.octavi.lab.preferences.SystemSettingSeekBarPreference
+            android:key="qqs_count"
+            android:title="@string/qqs_count_title"
+            android:max="7"
+            android:min="1"
+            android:defaultValue="4"
+            settings:units="" />   
         </PreferenceCategory>
 
     <com.octavi.lab.preferences.SystemSettingSwitchPreference
