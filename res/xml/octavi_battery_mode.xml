@@ -24,7 +24,7 @@
             android:dialogTitle="@string/status_bar_battery_style_title"
             android:entries="@array/status_bar_battery_style_entries"
             android:entryValues="@array/status_bar_battery_style_values"
-            android:defaultValue="0" />
+            android:defaultValue="14" />
 
         <!-- Show Battery percent on Statusbar -->
         <com.octavi.lab.preferences.SystemSettingListPreference
@@ -50,7 +50,7 @@
             android:key="do_left_battery_text"
             android:title="@string/left_battery_text_title"
             android:summary="@string/left_battery_text_summary"
-            android:defaultValue="false"/>
+            android:defaultValue="true"/>
             
          <!-- Make circle icon colourful -->
          <com.octavi.lab.preferences.SystemSettingSwitchPreference          

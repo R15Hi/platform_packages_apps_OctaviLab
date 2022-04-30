@@ -231,7 +231,7 @@
     <!-- Battery Styles -->
     <string name="battery_percent_title">Status bar battery percentage</string>
     <string name="status_bar_battery_style_title">Battery style</string>
-    <string name="status_bar_battery_style_icon_portrait">Icon portrait (default)</string>
+    <string name="status_bar_battery_style_icon_portrait">Icon portrait </string>
     <string name="status_bar_battery_style_circle">Circle</string>
     <string name="status_bar_battery_style_dotted_circle">Circle (Dotted)</string>
     <string name="status_bar_battery_style_filled_circle">Circle (Filled)</string>
@@ -261,7 +261,7 @@
     <string name="status_bar_battery_style_icon_rlandscape">Landscape R Default</string>
     <string name="status_bar_battery_style_icon_landscape">Landscape L Default</string>
     <string name="status_bar_battery_style_icon_rlandscape_style_a">Landscape R Style A</string>
-    <string name="status_bar_battery_style_icon_landscape_style_a">Landscape L Style A</string>
+    <string name="status_bar_battery_style_icon_landscape_style_a">Landscape L Style A(default)</string>
     <string name="status_bar_battery_style_icon_rlandscape_style_b">Landscape R Style B</string>
     <string name="status_bar_battery_style_icon_landscape_style_b">Landscape L Style B</string>
     <string name="status_bar_battery_style_icon_landscape_pill">Portrait Mx</string>
