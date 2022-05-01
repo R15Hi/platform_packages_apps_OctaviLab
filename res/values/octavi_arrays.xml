@@ -1203,6 +1203,13 @@
         <item>@string/explosion_charging_animation</item>
         <item>@string/rainbow_charging_animation</item>
         <item>@string/fire_charging_animation</item>
+        <item>@string/battery_charging_annimation</item>
+        <item>@string/colors_charging_annimation</item>
+        <item>@string/loading_circle_charging_annimation</item>
+        <item>@string/plugin_charging_annimation</item>
+        <item>@string/succeess_charging_annimation</item>
+        <item>@string/love_charging_annimation</item>
+        <item>@string/portrait_charging_annimation</item>
     </string-array>
 
     <string-array name="charging_animation_style_values" translatable="false">
@@ -1212,6 +1219,13 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
     </string-array>
 
 </resources>

@@ -90,6 +90,12 @@
         android:entries="@array/s_settings_style_entries"
         android:entryValues="@array/s_settings_style_values" />
         
+  <!-- Gvisual mod -->
+  <PreferenceCategory 
+         settings:iconSpaceReserved="false"
+         settings:allowDividerAbove="false"
+         android:title="@string/charging_beauty">
+        
      <com.octavi.lab.preferences.GlobalSettingSwitchPreference
             settings:iconSpaceReserved="false"
             android:key="wake_when_plugged_or_unplugged"
@@ -119,7 +125,9 @@
            android:summary="%s"
 	       android:dependency="charging_animation"
            android:defaultValue="1" />
-
+           
+        </PreferenceCategory>       
+           
     <!-- Gvisual mod -->
     <PreferenceCategory 
          settings:iconSpaceReserved="false"
@@ -133,7 +141,7 @@
             android:title="@string/gvisual_title"
             android:summary="@string/gvisual_summary"
             android:fragment="com.octavi.lab.fragments.Gvisual" />
-
-    </PreferenceCategory>
+            
+       </PreferenceCategory>     
 
 </PreferenceScreen>
