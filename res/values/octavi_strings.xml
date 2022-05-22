@@ -283,6 +283,8 @@
     <string name="status_bar_battery_style_icon_landscape_musku">Portrait IOS</string>
     <string name="status_bar_battery_style_icon_landscape_signal">Landscape Airoo</string>
     <string name="status_bar_battery_style_icon_landscape_buddy">Landscape Capsule</string>
+    <string name="status_bar_battery_style_icon_landscape_push">Landscape Push</string>
+    
     <!-- Status bar - Battery custom charging symbol -->
     <string name="text_charging_symbol_title">Custom charging symbol for text style</string>
     <string name="text_charging_symbol_dialog">Custom charging symbol near battery percentage text</string>
