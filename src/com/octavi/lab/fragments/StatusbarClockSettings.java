@@ -66,6 +66,7 @@ public class StatusbarClockSettings extends SettingsPreferenceFragment implement
     private static final String STATUSBAR_CLOCK_DATE_STYLE = "clock_date_style";
     private static final String STATUSBAR_CLOCK_DATE_FORMAT = "clock_date_format";
     private static final String STATUSBAR_CLOCK_DATE_POSITION = "statusbar_clock_date_position";
+    private static final String STATUSBAR_CLOCK_BG = "statusbar_clock_chip";
 
     public static final int CLOCK_DATE_STYLE_LOWERCASE = 1;
     public static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
@@ -77,6 +78,7 @@ public class StatusbarClockSettings extends SettingsPreferenceFragment implement
     private ListPreference mClockDateStyle;
     private ListPreference mClockDateFormat;
     private ListPreference mClockDatePosition;
+    private SwitchPreference mStatusBarClockBG;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -89,6 +91,10 @@ public class StatusbarClockSettings extends SettingsPreferenceFragment implement
         mStatusBarAmPm = (ListPreference) findPreference(STATUSBAR_AM_PM);
         mClockDateDisplay = (ListPreference) findPreference(STATUSBAR_CLOCK_DATE_DISPLAY);
         mClockDateStyle = (ListPreference) findPreference(STATUSBAR_CLOCK_DATE_STYLE);
+        mStatusBarClockBG = (SwitchPreference) findPreference(STATUSBAR_CLOCK_BG);
+        mStatusBarClockBG.setChecked((Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.STATUSBAR_CLOCK_CHIP, 1) == 1));
+        mStatusBarClockBG.setOnPreferenceChangeListener(this);
 
         int clockStyle = Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_CLOCK_STYLE, 0);
@@ -176,6 +182,11 @@ public class StatusbarClockSettings extends SettingsPreferenceFragment implement
                     Settings.System.STATUSBAR_CLOCK_DATE_DISPLAY, clockDateDisplay);
             mClockDateDisplay.setSummary(mClockDateDisplay.getEntries()[index]);
             setDateOptions();
+            return true;
+        } else if (preference == mStatusBarClockBG) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_CLOCK_CHIP, value ? 1 : 0);
             return true;
         } else if (preference == mClockDateStyle) {
             int clockDateStyle = Integer.valueOf((String) newValue);
