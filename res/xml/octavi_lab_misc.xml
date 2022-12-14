@@ -32,6 +32,12 @@
             android:title="@string/allow_signature_fake"
             android:summary="@string/allow_signature_fake_summary"
             android:defaultValue="false" />
+            
+          <com.octavi.lab.preferences.SecureSettingSwitchPreference  
+            android:key="window_ignore_secure"
+            android:title="@string/ignore_window_secure_title"
+            android:summary="@string/ignore_window_secure_summary"
+            android:defaultValue="false"/>
 
         <com.octavi.lab.preferences.SystemSettingListPreference
             settings:iconSpaceReserved="false"
