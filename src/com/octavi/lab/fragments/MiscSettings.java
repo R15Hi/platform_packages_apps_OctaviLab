@@ -36,10 +36,13 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "2";
-
+    private static final String KEY_PHOTOS_SPOOF = "use_photos_spoof";
+    private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
+    
     private ListPreference mScrollingCachePref;
     private CustomSeekBarPreference mPulseBrightness;
     private CustomSeekBarPreference mDozeBrightness;
+    private SwitchPreference mPhotosSpoof;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -55,6 +58,10 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         if (defaultPulse == -1) {
             defaultPulse = defaultDoze;
         }
+        
+        mPhotosSpoof = (SwitchPreference) findPreference(KEY_PHOTOS_SPOOF);
+        mPhotosSpoof.setChecked(SystemProperties.getBoolean(SYS_PHOTOS_SPOOF, true));
+        mPhotosSpoof.setOnPreferenceChangeListener(this);
 
         mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
         mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
@@ -87,6 +94,10 @@ public class MiscSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.OMNI_DOZE_BRIGHTNESS, value);
             return true;
+         } else if (preference == mPhotosSpoof) {
+            boolean value = (Boolean) newValue;
+            SystemProperties.set(SYS_PHOTOS_SPOOF, value ? "true" : "false");
+            return true;
          } else if (preference == mScrollingCachePref) {
             if (newValue != null) {
                 SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) newValue);
@@ -94,6 +105,10 @@ public class MiscSettings extends SettingsPreferenceFragment implements
             return true;
         }
         return false;
+    }
+          
+          public static void reset(Context mContext) {
+        SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
     }
 
     @Override
